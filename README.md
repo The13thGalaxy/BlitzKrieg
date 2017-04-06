@@ -1,8 +1,7 @@
 #ABOUT BLITZKRIEG
 BLITZKRIEG- A BOT CREATED BY THE13THGALAXY
-https://github.com/The13thGalaxy
-
 "If you have a few spare hours, I'd love to show you how this device is a masterpiece of design."
+
 ~Emmanuelle "Twitch" Pichon
 
 The creation of BlitzKrieg, nicknamed "Project Flash", began in late March of 2017, continuing into April of the same year. 

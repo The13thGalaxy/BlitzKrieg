@@ -21,3 +21,4 @@ I hope you're proud of this, Aurex. My being defiant of what you thought helped 
 If you're interested in seeing things Aurex has made for himself, his projects can be found at https://gitlab.com/Aurexine.
 
 Thanks for taking the time to read this. It's a small thing, but I really do appreciate it. Enjoy using BlitzKrieg, user.
+~Maya

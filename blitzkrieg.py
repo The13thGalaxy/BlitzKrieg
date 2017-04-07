@@ -1,4 +1,6 @@
-#BLITZKRIEG v.0.0.1
+#BlitzKrieg
+#Copyright 2017 Maya Pharis
+
 #Imports and Bot Command definition
 import asyncio
 import discord

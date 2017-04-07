@@ -29,9 +29,9 @@ async def hello(*args):
 #Command: Ping
 @my_bot.command()
 async def ping(*args):
-	return await my_boy.say("I'm not saying it.")
+	return await my_bot.say("I'm not saying it.")
 	#I thought some humor would be good here. Why not give BlitzKrieg his own personality, right?
-	
+
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():

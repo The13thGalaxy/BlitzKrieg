@@ -1,4 +1,6 @@
-#BLITZKRIEG v.0.0.1
+#BlitzKrieg
+#Copyright 2017 Maya Pharis
+
 #Imports and Bot Command definition
 import asyncio
 import discord
@@ -10,10 +12,10 @@ import sys
 from discord import utils
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level = logging.INFO)
 
 #Definition of "%"
-my_bot=Bot(command_prefix="%")
+my_bot = Bot(command_prefix = "%")
 
 #Bot Startup
 @my_bot.event
@@ -29,13 +31,13 @@ async def hello(*args):
 #Command: Ping
 @my_bot.command()
 async def ping(*args):
-	return await my_boy.say("I'm not saying it.")
+	return await my_bot.say("I'm not saying it.")
 	#I thought some humor would be good here. Why not give BlitzKrieg his own personality, right?
-	
+
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
-	op = random.randint(1,76)
+	op = random.randint(1, 76)
 	infile = open("attackers.txt", "r")
 	line = infile.readline()
 	c = 1

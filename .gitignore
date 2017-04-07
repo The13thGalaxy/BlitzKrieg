@@ -1,0 +1,8 @@
+# Windows stuff
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Macintosh stuff
+$RECYCLE.BIN/
+.DS_Store

@@ -48,4 +48,4 @@ async def attack():
 	infile.close()
 
 #TODO: Run tests of the written code tonight (4/7). Debug as needed.
-my_bot.run("Mjk5NTQ4Mjc2ODEyOTM5MjY2.C8fnWg.WAmImA3L8NufHkCJykCNtyTIdyc")
+my_bot.run(token)

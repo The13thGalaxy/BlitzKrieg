@@ -10,10 +10,10 @@ import sys
 from discord import utils
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level = logging.INFO)
 
 #Definition of "%"
-my_bot=Bot(command_prefix="%")
+my_bot = Bot(command_prefix = "%")
 
 #Bot Startup
 @my_bot.event
@@ -35,7 +35,7 @@ async def ping(*args):
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
-	op = random.randint(1,76)
+	op = random.randint(1, 76)
 	infile = open("attackers.txt", "r")
 	line = infile.readline()
 	c = 1

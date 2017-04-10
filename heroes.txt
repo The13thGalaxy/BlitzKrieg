@@ -1,0 +1,24 @@
+Genji
+McCree
+Pharah
+Reaper
+Soldier: 76
+Sombra
+Tracer
+Bastion
+Hanzo
+Junkrat
+Mei
+Torbjörn
+Widowmaker
+D.Va
+Orisa
+Reinhardt
+Roadhog
+Winston
+Zarya
+Ana
+Lúcio
+Mercy
+Symmetra
+Zenyatta

@@ -29,7 +29,7 @@ I hope you're proud of this, Aurexine. My being defiant of what you thought help
 
 If you're interested in seeing things Aurexine has made for himself, his projects can be found on [his GitLab profile](https://gitlab.com/Aurexine).
 
-In addition, I'd also like to thank another user by the name of Ikaheishi. She has been very emotionally supportive in times where I wanted to give up on the creation of BlitzKrieg, and is honestly part of the reason this bot even still exists. Not to say she didn't help me with the code directly. In fact, she even stylized this document quite a bit to give it this wonderfully pleasing organization.
+In addition, I'd also like to thank another user by the name of [Ikaheishi](http://ikaheishi.net). She has been very emotionally supportive in times where I wanted to give up on the creation of BlitzKrieg, and is honestly part of the reason this bot even still exists. Not to say she didn't help me with the code directly. In fact, she even stylized this document quite a bit to give it this wonderfully pleasing organization.
 
 Thanks for taking the time to read this. It's a small thing, but I really do appreciate it. Enjoy using BlitzKrieg.
 

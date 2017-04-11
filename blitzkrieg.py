@@ -19,7 +19,7 @@ my_bot = Bot(command_prefix = "%")
 #Bot Startup
 @my_bot.event
 async def on_read():
-    print("Deleting System32....")
+    print(r"Deleting C:\Windows\System32\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
 #Command: Hello

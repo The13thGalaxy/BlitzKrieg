@@ -19,7 +19,7 @@ my_bot = Bot(command_prefix = "%")
 #Bot Startup
 @my_bot.event
 async def on_read():
-    print("Deleting System32....")
+    print(r"Deleting C:\Windows\System32\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
 #Command: Hello
@@ -37,7 +37,7 @@ async def ping(*args):
 @my_bot.command()
 async def attack():
 	op = random.randint(1, 84)
-	infile = open("attackers.txt", "r")
+	infile = open("data/attackers.txt", "r")
 	line = infile.readline()
 	c = 1
 	while c != op:
@@ -52,7 +52,7 @@ async def attack():
 @my_bot.command()
 async def defense():
 	op = random.randint(1,76)
-	infile = open("defenders.txt", "r")
+	infile = open("data/defenders.txt", "r")
 	line = infile.readline()
 	c = 1
 	while c != op:
@@ -68,7 +68,7 @@ async def defense():
 @my_bot.command()
 async def hero():
 	hero = random.randint(1,25)
-	infile = open("heroes.txt", "r")
+	infile = open("data/heroes.txt", "r")
 	line = infile.readline()
 	c = 1
 	while c != hero:

@@ -77,12 +77,37 @@ async def hero():
 	if c == hero:
 		herochoice = line
 		await my_bot.say("You will be playing " + herochoice)
+	infile.close
 
-```
-#Command: Random Weapon (CS:GO)
-@my_bot.command()
-async def weapon():
-	wep = random .randint(1,23)
-```
-#TODO: Debug the progress from 0.0.1, then finish writing the random weapon code.
+#Command: Magic 8-Ball
+@my_bot.command
+async def 8ball():
+	fortune = random.randint(1,21)
+	infile = open("data/8ball.txt", "r")
+	line = infile.readline()
+	c = 1
+	while c != fortune:
+		c = c + 1
+		line = infile.readline()
+	if c == fortune:
+		fort = line
+		await my_bot.say(fort)
+	infile.close
+
+#Command: Random CS:GO Weapon
+@my_bot.command
+async def go():
+	weapon = random.randint(1,23)
+	infile = open("data/goweps.txt", "r")
+	c = 1
+	while c != weapon:
+		c = c + 1
+		line = infile.readline()
+	if c == line:
+		wep = weapon
+		await my_bot.say("You will be using the " + wep)
+	infile.close
+	
+#TODO: I should probably install TeamViewer at home. Maybe I can mess with it directly from school.
+#2DO: Write requirements.txt for the modules required to run BlitzKrieg.
 my_bot.run(token)

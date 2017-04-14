@@ -107,7 +107,6 @@ async def go():
 		wep = weapon
 		await my_bot.say("You will be using the " + wep)
 	infile.close
-	
+
 #TODO: I should probably install TeamViewer at home. Maybe I can mess with it directly from school.
-#2DO: Write requirements.txt for the modules required to run BlitzKrieg.
 my_bot.run(token)

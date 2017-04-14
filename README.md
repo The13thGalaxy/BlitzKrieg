@@ -8,6 +8,12 @@ BlitzKrieg
 
 
 
+Dependencies
+--------------------
+
+* [Discord.py](https://github.com/Rapptz/discord.py)
+
+
 History
 --------------------
 

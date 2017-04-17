@@ -35,7 +35,7 @@ await client.change_presence(game=discord.Game(name='GAME NAME GOES HERE'))
 #Command: Hello
 @my_bot.command()
 async def hello(*args):
-    return await my_bot.say("Go away.)
+	return await my_bot.say("Go away.")
 
 #Command: Ping
 @my_bot.command()
@@ -46,78 +46,32 @@ async def ping(*args):
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
-	op = random.randint(1, 84)
-	infile = open("data/attackers.txt", "r")
-	line = infile.readline()
-	c = 1
-	while c != op:
-		c = c + 1
-		line = infile.readline()
-	if c == op:
-		operator = line
-		await my_bot.say("You will be playing " + operator)
-	infile.close()
+	operator = random.choice(open('data/attackers.txt').readlines())
+	await my_bot.say("You will be playing " + operator)
 
 #Command: Random Operator (Rainbow Six Siege) - Defense
 @my_bot.command()
 async def defense():
-	op = random.randint(1,76)
-	infile = open("data/defenders.txt", "r")
-	line = infile.readline()
-	c = 1
-	while c != op:
-		c = c + 1
-		line = infile.readline()
-	if c == op:
-		operator = line
-		await my_bot.say("You will be playing " + operator)
-	infile.close()
-	#There must be a more efficent way to randomly select an operator..God knows I'm too lazy too find it, though.
+	operator = random.choice(open('data/defenders.txt').readlines())
+	await my_bot.say("You will be playing " + operator)
 
 #Command: Random Hero (Overwatch)
 @my_bot.command()
 async def hero():
-	hero = random.randint(1,25)
-	infile = open("data/heroes.txt", "r")
-	line = infile.readline()
-	c = 1
-	while c != hero:
-		c = c +1
-		line = infile.readline()
-	if c == hero:
-		herochoice = line
-		await my_bot.say("You will be playing " + herochoice)
-	infile.close()
+	herochoice = random.choice(open('data/heroes.txt').readlines())
+	await my_bot.say("You will be playing " + herochoice)
 
 #Command: Magic 8-Ball
 @my_bot.command
 async def eightball():
-	fortune = random.randint(1,21)
-	infile = open("data/8ball.txt", "r")
-	line = infile.readline()
-	c = 1
-	while c != fortune:
-		c = c + 1
-		line = infile.readline()
-	if c == fortune:
-		fort = line
-		await my_bot.say(fort)
-	infile.close()
+	fort = random.choice(open('data/heroes.txt').readlines())
+	await my_bot.say(fort)
 
 #Command: Random CS:GO Weapon
 @my_bot.command
 async def go():
-	weapon = random.randint(1,23)
-	infile = open("data/goweps.txt", "r")
-	c = 1
-	while c != weapon:
-		c = c + 1
-		line = infile.readline()
-	if c == line:
-		wep = weapon
-		await my_bot.say("You will be using the " + wep)
-	infile.close()
-	#This oddly doesn't work. I need to work on it.
+	wep = random.choice(open('data/goweps.txt').readlines())
+	await my_bot.say("You will be using the " + wep)
 
 #Command: In a Nutshell quotes
 @my_bot.command

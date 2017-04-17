@@ -8,9 +8,10 @@ BlitzKrieg
 
 
 
-Dependencies
+Requirements
 --------------------
 
+* [Python]() 3.5 or newer.
 * [Discord.py](https://github.com/Rapptz/discord.py)
 
 

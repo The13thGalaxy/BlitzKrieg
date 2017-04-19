@@ -1,4 +1,4 @@
-#BlitzKrieg v.0.0.1
+#BlitzKrieg v.0.0.3
 #Copyright 2017 Maya Pharis
 
 #GENERAL BOT STUFF
@@ -25,12 +25,14 @@ async def on_read():
     #I have a feeling I'm gonna get straight up slugged for this.
 
 #"Playing" game status
-await client.change_presence(game=discord.Game(name='GAME NAME GOES HERE'))
-
-
+await client.change_presence(game=discord.Game(name='with nuclear ordinance'))
+#You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing". 
 
 
 #COMMANDS
+
+#Command: Command List
+@my_bot.command
 
 #Command: Hello
 @my_bot.command()
@@ -62,38 +64,69 @@ async def hero():
 	await my_bot.say("You will be playing " + herochoice)
 
 #Command: Magic 8-Ball
-@my_bot.command
+@my_bot.command()
 async def eightball():
 	fort = random.choice(open('data/heroes.txt').readlines())
 	await my_bot.say(fort)
 
 #Command: Random CS:GO Weapon
-@my_bot.command
+@my_bot.command()
 async def go():
 	wep = random.choice(open('data/goweps.txt').readlines())
 	await my_bot.say("You will be using the " + wep)
 
 #Command: In a Nutshell quotes
-@my_bot.command
+@my_bot.command()
 #Blake
 async def blake():
 	await my_bot.say("I'm carrying. I don't care if I'm at the bottom of the leaderboard, I'm carrying.")
-@my_bot.command
+@my_bot.command()
 #Brandon
 async def brandon():
 	await my_bot.say("WHAT?! HOW DIDN'T I KILL HIM? THAT'S BS.")
-@my_bot.command
+@my_bot.command()
 #Josh
 async def josh():
 	await my_bot.say("Everyone's so mad. Pls guise, calm down, we're all friends here.")
-@my_bot.command
+@my_bot.command()
 #Jake
 async def jake():
 	await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
 @my_bot.command
-#Nick
-async def nick():
+#Maya
+async def maya():
 	await my_bot.say("(angry silence as Reaper is selected)")
 	
+#Command: Game Selector
+#Sometimes I just can't decide what game to play. Hopefully, this will help with that.
+@my_bot.command()
+async def game():
+	game = random.choice(open('data/games.txt').readlines())
+	await my_bot.say("You should play " + game)
+
+#Command: Uprising Hero Selector
+#To mix it up.
+@my_bot.command()
+async def uprising():
+	players = ["Maya", "Josh", "Blake", "Brandon"]
+	heroes = ["Reinhardt", "Torb", "Mercy", "Tracer"]
+	random.shuffle(heroes)
+	random.shuffle(players)
+	await my_bot.say("Find your position in the name list, then find the hero in the same position.")
+	await my_bot.say(players)
+	await my_bot.say(heroes)
+	#This may be needlessly verbose, but hey. I think this works.
+
+#Command: Uprising (All Heroes)
+@my_bot.command()
+async def uprisingall():
+		players = ["Maya", "Josh", "Blake", "Brandon"]
+		heroes = ["Genji", "McCree", "Pharah", "Soldier: 76", "Sombra", "Reaper", "Tracer", "Bastion", "Hanzo", "Junkrat", "Torbjorn", "Mei", "Widowmaker", "D.Va", "Orisa", "Reinhardt", "Winston", "Roadhog", "Zarya", "Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
+		random.shuffle(players)
+		random.shuffle(heroes)
+		await my_bot.say("Find your position in the name list, then find the hero in the same position.")
+		await my_bot.say(players)
+		await my_bot.say(heroes [0:4])
+		#I'm not sure of how this and the other Uprising function will run right now. We'll give this a run at my home terminal and do it live.
 
 my_bot.run(token)

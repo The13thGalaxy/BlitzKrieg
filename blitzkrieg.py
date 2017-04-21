@@ -1,5 +1,4 @@
 #BlitzKrieg v.0.0.3
-#Copyright 2017 Maya Pharis
 
 #GENERAL BOT STUFF
 
@@ -15,36 +14,41 @@ from discord import utils
 from discord.ext.commands import Bot
 logging.basicConfig(level = logging.INFO)
 
-#Definition of "%"
+#Definition of BlitzKrieg's prefix.
 my_bot = Bot(command_prefix = "%")
 
 #Bot Startup
 @my_bot.event
 async def on_read():
-    print(r"Deleting C:\Windows\System32\...")
+    print("Deleting C:\Windows\System32\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
-#"Playing" game status
-await client.change_presence(game=discord.Game(name='with nuclear ordinance'))
+#"Playing" status
+await client.change_presence(game=discord.Game(name='with nuclear ordinance.'))
 #You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing". 
-
+#This command is currently broken. Supposedly, "await discord.SetGame("try !help")" may work, but I think that's in C.
 
 #COMMANDS
 
 #Command: Command List
 @my_bot.command
+async def help():
+	await my_bot.say("```\nBLITZKRIEG v0.0.3\n\nCURRENTLY FUNCTIONING COMMANDS\n\n%hello - Greets the user.\n%ping - Checks to see if the bot is working.\n %blake, %brandon, %josh, %jake - Returns a basic response.\n %uprising, %uprisingall - Makes a team for the Uprising gamemode.\n```")
+	await my_bot.say("```\nCURRENTLY BROKEN COMMANDS\n All randomization commands (Attackers, Defenders, Hero, GO, Games, Magic 8 Ball\n```")
+	await my_bot.say("```\nPLANNED FUNCTIONS\nA command where you can input a team composition for Overwatch. (i.e. 2 Offense, 2 Defense, 1 Tank, 1 Support)\nRandom Hero by role\nPossible Blackjack functionality.\n```")
 
 #Command: Hello
 @my_bot.command()
 async def hello(*args):
-	return await my_bot.say("Go away.")
+	return await my_bot.say("What's good, nerd?")
 
 #Command: Ping
 @my_bot.command()
 async def ping(*args):
-	return await my_bot.say("Heck off.")
+	return await my_bot.say("Yeah, yeah. Pong. Whatever.")
 	#I thought some humor would be good here. Why not give BlitzKrieg his own personality, right?
 
+		
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
@@ -93,8 +97,8 @@ async def josh():
 async def jake():
 	await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
 @my_bot.command
-#Maya
-async def maya():
+#Nick
+async def nick():
 	await my_bot.say("(angry silence as Reaper is selected)")
 	
 #Command: Game Selector
@@ -115,7 +119,6 @@ async def uprising():
 	await my_bot.say("Find your position in the name list, then find the hero in the same position.")
 	await my_bot.say(players)
 	await my_bot.say(heroes)
-	#This may be needlessly verbose, but hey. I think this works.
 
 #Command: Uprising (All Heroes)
 @my_bot.command()
@@ -127,6 +130,6 @@ async def uprisingall():
 		await my_bot.say("Find your position in the name list, then find the hero in the same position.")
 		await my_bot.say(players)
 		await my_bot.say(heroes [0:4])
-		#I'm not sure of how this and the other Uprising function will run right now. We'll give this a run at my home terminal and do it live.
+
 
 my_bot.run(token)

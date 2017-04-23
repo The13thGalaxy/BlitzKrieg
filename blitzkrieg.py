@@ -20,12 +20,12 @@ my_bot = Bot(command_prefix = "%")
 #Bot Startup
 @my_bot.event
 async def on_read():
-    print("Deleting C:\Windows\System32\...")
+    print("Deleting C:\\Windows\\System32\\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
 #"Playing" status
 await client.change_presence(game=discord.Game(name='with nuclear ordinance.'))
-#You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing". 
+#You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing".
 #This command is currently broken. Supposedly, "await discord.SetGame("try !help")" may work, but I think that's in C.
 
 #COMMANDS
@@ -48,7 +48,7 @@ async def ping(*args):
 	return await my_bot.say("Yeah, yeah. Pong. Whatever.")
 	#I thought some humor would be good here. Why not give BlitzKrieg his own personality, right?
 
-		
+
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
@@ -100,7 +100,7 @@ async def jake():
 #Nick
 async def nick():
 	await my_bot.say("(angry silence as Reaper is selected)")
-	
+
 #Command: Game Selector
 #Sometimes I just can't decide what game to play. Hopefully, this will help with that.
 @my_bot.command()

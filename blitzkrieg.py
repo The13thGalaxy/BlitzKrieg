@@ -23,9 +23,9 @@ async def on_read():
     print("Deleting C:\\Windows\\System32\\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
-#"Playing" status
-await my_bot.change_presence(game=discord.Game(name='with nuclear ordinance.'))
-#You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing".
+    #"Playing" status
+    await my_bot.change_presence(game=discord.Game(name='with nuclear ordinance.'))
+    #You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing".
 
 #COMMANDS
 

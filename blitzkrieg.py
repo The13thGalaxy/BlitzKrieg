@@ -24,9 +24,8 @@ async def on_read():
     #I have a feeling I'm gonna get straight up slugged for this.
 
 #"Playing" status
-await client.change_presence(game=discord.Game(name='with nuclear ordinance.'))
+await my_bot.change_presence(game=discord.Game(name='with nuclear ordinance.'))
 #You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing".
-#This command is currently broken. Supposedly, "await discord.SetGame("try !help")" may work, but I think that's in C.
 
 #COMMANDS
 

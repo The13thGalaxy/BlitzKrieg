@@ -51,7 +51,7 @@ async def ping(*args):
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
-	operator = random.choice(open('data/attackers.txt').readlines())
+	operator = random.choice(open("data/attackers.txt").readlines())
 	await my_bot.say("You will be playing " + operator)
 
 #Command: Random Operator (Rainbow Six Siege) - Defense
@@ -69,7 +69,7 @@ async def hero():
 #Command: Magic 8-Ball
 @my_bot.command()
 async def eightball():
-	fort = random.choice(open('data/heroes.txt').readlines())
+	fort = random.choice(open('data/8ball.txt').readlines())
 	await my_bot.say(fort)
 
 #Command: Random CS:GO Weapon
@@ -95,11 +95,14 @@ async def josh():
 #Jake
 async def jake():
 	await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
-@my_bot.command
+@my_bot.command()
 #Nick
 async def nick():
-	await my_bot.say("(angry silence as Reaper is selected)")
-
+	await my_bot.say("I NEEEEEED HEAAAAAALING")
+@my_bot.command()
+#Maya
+async def maya():
+	await my_bot.say("You shouldn't be able to see this command.")
 #Command: Game Selector
 #Sometimes I just can't decide what game to play. Hopefully, this will help with that.
 @my_bot.command()
@@ -129,6 +132,63 @@ async def uprisingall():
 		await my_bot.say("Find your position in the name list, then find the hero in the same position.")
 		await my_bot.say(players)
 		await my_bot.say(heroes [0:4])
+'''
+#Command: Overwatch Team Comp
+@my_bot.command()
+async def comp():
+    if message.content.startswith('%comp'):
+        await my_bot.send_message(message.channel, 'How many offense heroes do you want?')
+        i == 1
+		if i == 1:
+            msg = await my_bot.wait_for_message(author=message.author)
+			offen = msg
+			i = i + 1
+            await my_bot.send_message(message.channel, "How many defense heroes do you want?")
+		if i == 2:
+			msg = await my_bot.wait_for_message(author=message.author)
+			defen = msg
+			i = i + 1
+			await my_bot.send_message(message.channel, "How many tanks do you want?")
+		if i == 3:
+			msg = await my_bot.wait_for_message(author=message.author)
+			tan = msg
+			i = i + 1
+			await my_bot.send_message(message.channel, "How many supports do you want?")
+		if i == 4:
+			msg = await my_bot.wait_for_message(author=message.author)
+			supp = msg
+		offense = ["Genji", "McCree", "Soldier: 76", "Reaper", "Sombra", "Tracer"]
+		defense = ["Bastion", "Hanzo", "Junkrat", "Widowmaker", "Mei", "Torb"]
+		tank = ["D.Va", "Orisa", "Roadhog", "Reinhardt", "Winston", "Zarya"]
+		support = ["Mercy", "Lucio", "Ana", "Symmetra", "Zenyatta"]
+		random.shuffle(offense)
+		random.shuffle(defense)
+		random.shuffle(tank)
+		random.shuffle(support)
+		await my_bot.send_message(message.channel, "Offense Heroes: " + offense[0:(int(offen))])
+'''
+#Overwatch Random: DPS
+@my_bot.command()
+async def herodps():
+	dps = random.choice(open("data/dps.txt").readlines())
+	await my_bot.say("You will be playing " + dps)
 
+#Overwatch Random: Tank
+@my_bot.command()
+async def herotank():
+	dps = random.choice(open("data/tank.txt").readlines())
+	await my_bot.say("You will be playing " + tank)
 
+#Overwatch Random: Healer
+@my_bot.command()
+async def heroheal():
+	heal = random.choice(open("data/heal.txt").readlines())
+	await my_bot.say("You will be playing " + heal)
+
+#Overwatch Random: Defense
+@my_bot.command()
+async def herodef():
+	herodef = random.choice(open("data/def.txt").readlines())
+	await my_bot.say("You will be playing " + herodef)
+	
 my_bot.run(token)

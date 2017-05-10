@@ -1,4 +1,4 @@
-#BlitzKrieg v.0.0.3
+##BlitzKrieg v.0.0.3
 
 #GENERAL BOT STUFF
 
@@ -17,121 +17,39 @@ logging.basicConfig(level = logging.INFO)
 #Definition of BlitzKrieg's prefix.
 my_bot = Bot(command_prefix = "%")
 
+
 #Bot Startup
 @my_bot.event
 async def on_read():
     print("Deleting C:\\Windows\\System32\\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
-    #"Playing" status
-    await my_bot.change_presence(game=discord.Game(name='with nuclear ordinance.'))
-    #You can change "with nuclear ordinance" to whatever you want BlitzKrieg to display as what he's "playing".
-
 #COMMANDS
-
-#Command: Command List
-@my_bot.command
-async def help():
-	await my_bot.say("```\nBLITZKRIEG v0.0.3\n\nCURRENTLY FUNCTIONING COMMANDS\n\n%hello - Greets the user.\n%ping - Checks to see if the bot is working.\n %blake, %brandon, %josh, %jake - Returns a basic response.\n %uprising, %uprisingall - Makes a team for the Uprising gamemode.\n```")
-	await my_bot.say("```\nCURRENTLY BROKEN COMMANDS\n All randomization commands (Attackers, Defenders, Hero, GO, Games, Magic 8 Ball\n```")
-	await my_bot.say("```\nPLANNED FUNCTIONS\nA command where you can input a team composition for Overwatch. (i.e. 2 Offense, 2 Defense, 1 Tank, 1 Support)\nRandom Hero by role\nPossible Blackjack functionality.\n```")
 
 #Command: Hello
 @my_bot.command()
 async def hello(*args):
-	return await my_bot.say("What's good, nerd?")
+	return await my_bot.say("Qu'est-ce que sup, my dude?")
 
 #Command: Ping
 @my_bot.command()
 async def ping(*args):
-	return await my_bot.say("Yeah, yeah. Pong. Whatever.")
-	#I thought some humor would be good here. Why not give BlitzKrieg his own personality, right?
+    return await my_bot.say("A game released in 1972 by Atari.")
 
-
+#RAINBOW SIX SIEGE
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
-	operator = random.choice(open("data/attackers.txt").readlines())
-	await my_bot.say("You will be playing " + operator)
-
+    attk = random.choice(open("data/attackers.txt").readlines())
+    await my_bot.say("You will be playing " + attk)
 #Command: Random Operator (Rainbow Six Siege) - Defense
 @my_bot.command()
 async def defense():
-	operator = random.choice(open('data/defenders.txt').readlines())
-	await my_bot.say("You will be playing " + operator)
+    defen = random.choice(open("data/defenders.txt").readlines())
+    await my_bot.say("You will be playing " + defen)
 
-#Command: Random Hero (Overwatch)
-@my_bot.command()
-async def hero():
-	herochoice = random.choice(open('data/heroes.txt').readlines())
-	await my_bot.say("You will be playing " + herochoice)
+#OVERWATCH
 
-#Command: Magic 8-Ball
-@my_bot.command()
-async def eightball():
-	fort = random.choice(open('data/8ball.txt').readlines())
-	await my_bot.say(fort)
-
-#Command: Random CS:GO Weapon
-@my_bot.command()
-async def go():
-	wep = random.choice(open('data/goweps.txt').readlines())
-	await my_bot.say("You will be using the " + wep)
-
-#Command: In a Nutshell quotes
-@my_bot.command()
-#Blake
-async def blake():
-	await my_bot.say("I'm carrying. I don't care if I'm at the bottom of the leaderboard, I'm carrying.")
-@my_bot.command()
-#Brandon
-async def brandon():
-	await my_bot.say("WHAT?! HOW DIDN'T I KILL HIM? THAT'S BS.")
-@my_bot.command()
-#Josh
-async def josh():
-	await my_bot.say("Everyone's so mad. Pls guise, calm down, we're all friends here.")
-@my_bot.command()
-#Jake
-async def jake():
-	await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
-@my_bot.command()
-#Nick
-async def nick():
-	await my_bot.say("I NEEEEEED HEAAAAAALING")
-@my_bot.command()
-#Maya
-async def maya():
-	await my_bot.say("You shouldn't be able to see this command.")
-#Command: Game Selector
-#Sometimes I just can't decide what game to play. Hopefully, this will help with that.
-@my_bot.command()
-async def game():
-	game = random.choice(open('data/games.txt').readlines())
-	await my_bot.say("You should play " + game)
-
-#Command: Uprising Hero Selector
-#To mix it up.
-@my_bot.command()
-async def uprising():
-	players = ["Maya", "Josh", "Blake", "Brandon"]
-	heroes = ["Reinhardt", "Torb", "Mercy", "Tracer"]
-	random.shuffle(heroes)
-	random.shuffle(players)
-	await my_bot.say("Find your position in the name list, then find the hero in the same position.")
-	await my_bot.say(players)
-	await my_bot.say(heroes)
-
-#Command: Uprising (All Heroes)
-@my_bot.command()
-async def uprisingall():
-		players = ["Maya", "Josh", "Blake", "Brandon"]
-		heroes = ["Genji", "McCree", "Pharah", "Soldier: 76", "Sombra", "Reaper", "Tracer", "Bastion", "Hanzo", "Junkrat", "Torbjorn", "Mei", "Widowmaker", "D.Va", "Orisa", "Reinhardt", "Winston", "Roadhog", "Zarya", "Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
-		random.shuffle(players)
-		random.shuffle(heroes)
-		await my_bot.say("Find your position in the name list, then find the hero in the same position.")
-		await my_bot.say(players)
-		await my_bot.say(heroes [0:4])
 '''
 #Command: Overwatch Team Comp
 @my_bot.command()
@@ -170,25 +88,114 @@ async def comp():
 #Overwatch Random: DPS
 @my_bot.command()
 async def herodps():
-	dps = random.choice(open("data/dps.txt").readlines())
-	await my_bot.say("You will be playing " + dps)
+    dps = random.choice(open("data/dps.txt").readlines())
+    await my_bot.say("You will be playing " + dps)
 
 #Overwatch Random: Tank
 @my_bot.command()
 async def herotank():
-	dps = random.choice(open("data/tank.txt").readlines())
-	await my_bot.say("You will be playing " + tank)
+    dps = random.choice(open("data/tank.txt").readlines())
+    await my_bot.say("You will be playing " + tank)
 
 #Overwatch Random: Healer
 @my_bot.command()
 async def heroheal():
-	heal = random.choice(open("data/heal.txt").readlines())
-	await my_bot.say("You will be playing " + heal)
+    heal = random.choice(open("data/heal.txt").readlines())
+    await my_bot.say("You will be playing " + heal)
 
 #Overwatch Random: Defense
 @my_bot.command()
 async def herodef():
-	herodef = random.choice(open("data/def.txt").readlines())
-	await my_bot.say("You will be playing " + herodef)
-	
+    herodef = random.choice(open("data/def.txt").readlines())
+    await my_bot.say("You will be playing " + herodef)
+
+#Comp Points Rewards checker
+@my_bot.command()
+async def bronze():
+    await my_bot.say("You will recieve 100 competitive points at the end of the season. Try harder next season.")
+@my_bot.command()
+async def silver():
+    await my_bot.say("You will recieve 200 competitive points at the end of the season. A decent rank, but you can do better.")
+@my_bot.command()
+async def gold():
+    await my_bot.say("You will recieve 400 competitive points at the end of the season. Respectable rank. Can you do better?")
+@my_bot.command()
+async def platinum():
+    await my_bot.say("You will recieve 800 competitive points at the end of the season. You're probably here because of decay, aren't you?")
+@my_bot.command()
+async def diamond():
+    await my_bot.say("You will recieve 1200 competitive points at the end of the season. Impressive. Get to Master. I dare you.")
+@my_bot.command()
+async def master():
+    await my_bot.say("You will recieve 2000 competitive points at the end of the season. One step away from glory. Do it.")
+@my_bot.command()
+async def grandmaster():
+    await my_bot.say("You will recieve 3000 competitive points at the end of the season. You've done it. I saulte you, you no-life nerd.")
+@my_bot.command()
+async def top500():
+    await my_bot.say("Hats off to you, my good man. You truly are a respectable Overwatch player.")
+#Command: Random Hero (Overwatch)
+@my_bot.command()
+async def hero():
+    hero = random.choice(open("data/heroes.txt").readlines())
+    await my_bot.say("You will be playing " + hero)
+#Command Set: In a Nutshell quotes
+@my_bot.command()
+#Blake
+async def blake():
+    await my_bot.say("I'm carrying. I don't care if I'm at the bottom of the leaderboard, I'm carrying.")
+@my_bot.command()
+#Brandon
+async def brandon():
+    await my_bot.say("WHAT?! HOW DIDN'T I KILL HIM? THAT'S BS.")
+@my_bot.command()
+#Josh
+async def josh():
+    await my_bot.say("Everyone's so mad. Pls guise, calm down, we're all friends here.")
+@my_bot.command()
+#Jake
+async def jake():
+    await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
+@my_bot.command()
+#Maya
+async def maya():
+    await my_bot.say("I NEEEEEED HEAAAAAALING")
+@my_bot.command()
+#Ray
+async def ray():
+    await my_bot.say("Give up, Maya. You'll never understand how to code right. Also if you call me a weeb I'm going to get unreasonably upset and yell at everyone. awoo luhmaeo")
+@my_bot.command()
+#Xavier
+async def xavier():
+    await my_bot.say("Why does nobody listen to me?")
+@my_bot.command()
+#Leah
+async def leah():
+    await my_bot.say("If you say you need healing one more time, I'm gonna fucking kill you.")
+@my_bot.command()
+#Max
+async def max():
+    await my_bot.say("DM sent to Leah. Prepare to be dickpunched, kid.")
+@my_bot.command()
+#Laura
+async def laura():
+    await my_bot.say("(Insert Japanese here.) Woomy.")
+@my_bot.command()
+#British Josh
+async def cokejosh():
+    await my_bot.say("Tea and crumpets, mate. Go fuck yourself.")
+
+#MISC
+#Command: Magic 8-Ball
+@my_bot.command()
+async def eightball():
+    ball = random.choice(open("data/8ball.txt").readlines())
+    await my_bot.say(ball)
+
+#Command: Game Selector
+#Sometimes I just can't decide what game to play. Hopefully, this will help with that.
+@my_bot.command()
+async def game():
+    game = random.choice(open('data/games.txt').readlines())
+    await my_bot.say("You should play " + game)	
 my_bot.run(token)

@@ -24,6 +24,7 @@ async def on_read():
     print("Deleting C:\\Windows\\System32\\...")
     #I have a feeling I'm gonna get straight up slugged for this.
 
+
 #COMMANDS
 
 #Command: Hello
@@ -36,20 +37,22 @@ async def hello(*args):
 async def ping(*args):
     return await my_bot.say("A game released in 1972 by Atari.")
 
+
 #RAINBOW SIX SIEGE
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
     attk = random.choice(open("data/attackers.txt").readlines())
     await my_bot.say("You will be playing " + attk)
+
 #Command: Random Operator (Rainbow Six Siege) - Defense
 @my_bot.command()
 async def defense():
     defen = random.choice(open("data/defenders.txt").readlines())
     await my_bot.say("You will be playing " + defen)
 
-#OVERWATCH
 
+#OVERWATCH
 '''
 #Command: Overwatch Team Comp
 @my_bot.command()
@@ -134,56 +137,70 @@ async def grandmaster():
 @my_bot.command()
 async def top500():
     await my_bot.say("Hats off to you, my good man. You truly are a respectable Overwatch player.")
+
 #Command: Random Hero (Overwatch)
 @my_bot.command()
 async def hero():
     hero = random.choice(open("data/heroes.txt").readlines())
     await my_bot.say("You will be playing " + hero)
-#Command Set: In a Nutshell quotes
-@my_bot.command()
+
+
+#IN A NUTSHELL QUOTES
 #Blake
+@my_bot.command()
 async def blake():
     await my_bot.say("I'm carrying. I don't care if I'm at the bottom of the leaderboard, I'm carrying.")
-@my_bot.command()
+
 #Brandon
+@my_bot.command()
 async def brandon():
     await my_bot.say("WHAT?! HOW DIDN'T I KILL HIM? THAT'S BS.")
-@my_bot.command()
+
 #Josh
+@my_bot.command()
 async def josh():
     await my_bot.say("Everyone's so mad. Pls guise, calm down, we're all friends here.")
-@my_bot.command()
+
 #Jake
+@my_bot.command()
 async def jake():
     await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
-@my_bot.command()
+
 #Maya
+@my_bot.command()
 async def maya():
     await my_bot.say("I NEEEEEED HEAAAAAALING")
-@my_bot.command()
+
 #Ray
+@my_bot.command()
 async def ray():
     await my_bot.say("Give up, Maya. You'll never understand how to code right. Also if you call me a weeb I'm going to get unreasonably upset and yell at everyone. awoo luhmaeo")
-@my_bot.command()
+
 #Xavier
+@my_bot.command()
 async def xavier():
     await my_bot.say("Why does nobody listen to me?")
-@my_bot.command()
+
 #Leah
+@my_bot.command()
 async def leah():
     await my_bot.say("If you say you need healing one more time, I'm gonna fucking kill you.")
-@my_bot.command()
+
 #Max
+@my_bot.command()
 async def max():
     await my_bot.say("DM sent to Leah. Prepare to be dickpunched, kid.")
-@my_bot.command()
+
 #Laura
+@my_bot.command()
 async def laura():
     await my_bot.say("(Insert Japanese here.) Woomy.")
-@my_bot.command()
+
 #British Josh
+@my_bot.command()
 async def cokejosh():
     await my_bot.say("Tea and crumpets, mate. Go fuck yourself.")
+
 
 #MISC
 #Command: Magic 8-Ball
@@ -197,5 +214,5 @@ async def eightball():
 @my_bot.command()
 async def game():
     game = random.choice(open('data/games.txt').readlines())
-    await my_bot.say("You should play " + game)	
+    await my_bot.say("You should play " + game)
 my_bot.run(token)

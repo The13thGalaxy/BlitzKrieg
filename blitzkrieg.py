@@ -194,7 +194,7 @@ async def max():
 #Laura
 @my_bot.command()
 async def laura():
-    await my_bot.say("(Insert Japanese here.) Woomy.")
+    await random.choice(open("data/nutshell_quotes/Laura.txt").readlines())
 
 #British Josh
 @my_bot.command()

@@ -151,57 +151,57 @@ async def hero():
 #Blake
 @my_bot.command()
 async def blake():
-    await my_bot.say("I'm carrying. I don't care if I'm at the bottom of the leaderboard, I'm carrying.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Blake.txt").readlines()))
 
 #Brandon
 @my_bot.command()
 async def brandon():
-    await my_bot.say("WHAT?! HOW DIDN'T I KILL HIM? THAT'S BS.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Brandon.txt").readlines()))
 
 #Josh
 @my_bot.command()
 async def josh():
-    await my_bot.say("Everyone's so mad. Pls guise, calm down, we're all friends here.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Josh.txt").readlines()))
 
 #Jake
 @my_bot.command()
 async def jake():
-    await my_bot.say("That shouldn't be in the game. I don't care if I'm entirely new to the game. I know how games work.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Jake.txt").readlines()))
 
 #Maya
 @my_bot.command()
 async def maya():
-    await my_bot.say("I NEEEEEED HEAAAAAALING")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Maya.txt").readlines()))
 
 #Ray
 @my_bot.command()
 async def ray():
-    await my_bot.say("Give up, Maya. You'll never understand how to code right. Also if you call me a weeb I'm going to get unreasonably upset and yell at everyone. awoo luhmaeo")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Ray.txt").readlines()))
 
 #Xavier
 @my_bot.command()
 async def xavier():
-    await my_bot.say("Why does nobody listen to me?")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Xavier.txt").readlines()))
 
 #Leah
 @my_bot.command()
 async def leah():
-    await my_bot.say("If you say you need healing one more time, I'm gonna fucking kill you.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Leah.txt").readlines()))
 
 #Max
 @my_bot.command()
 async def max():
-    await my_bot.say("DM sent to Leah. Prepare to be dickpunched, kid.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Max.txt").readlines()))
 
 #Laura
 @my_bot.command()
 async def laura():
-    await my_bot.say("(insert Japanese here). Woomy.")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Laura.txt").readlines()))
 
 #British Josh
 @my_bot.command()
 async def cokejosh():
-    await my_bot.say("Tea and crumpets, mate. Go piss up a rope..")
+    await my_bot.say(random.choice(open("data/nutshell_quotes/British_Josh.txt").readlines()))
 
 
 #MISC

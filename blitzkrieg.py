@@ -1,4 +1,5 @@
-##BlitzKrieg v.0.0.3
+##BlitzKrieg v.1.0
+#Copyright Maya Pharis 2017
 
 #GENERAL BOT STUFF
 
@@ -41,12 +42,12 @@ async def ping(*args):
 @my_bot.command()
 async def attack():
     attk = random.choice(open("data/attackers.txt").readlines())
-    await my_bot.say("You will be playing " + attk)
+    await my_bot.say("You will be playing as " + attk)
 #Command: Random Operator (Rainbow Six Siege) - Defense
 @my_bot.command()
 async def defense():
     defen = random.choice(open("data/defenders.txt").readlines())
-    await my_bot.say("You will be playing " + defen)
+    await my_bot.say("You will be playing as " + defen)
 
 #OVERWATCH
 
@@ -94,13 +95,13 @@ async def herodps():
 #Overwatch Random: Tank
 @my_bot.command()
 async def herotank():
-    dps = random.choice(open("data/tank.txt").readlines())
+    tank = random.choice(open("data/tank.txt").readlines())
     await my_bot.say("You will be playing " + tank)
 
 #Overwatch Random: Healer
 @my_bot.command()
 async def heroheal():
-    heal = random.choice(open("data/heal.txt").readlines())
+    heal = random.choice(open("data/healer.txt").readlines())
     await my_bot.say("You will be playing " + heal)
 
 #Overwatch Random: Defense
@@ -138,7 +139,7 @@ async def top500():
 @my_bot.command()
 async def hero():
     hero = random.choice(open("data/heroes.txt").readlines())
-    await my_bot.say("You will be playing " + hero)
+    await my_bot.say("You will be playing " + hero +".")
 #Command Set: In a Nutshell quotes
 @my_bot.command()
 #Blake
@@ -197,5 +198,30 @@ async def eightball():
 @my_bot.command()
 async def game():
     game = random.choice(open('data/games.txt').readlines())
-    await my_bot.say("You should play " + game)	
-my_bot.run(token)
+    await my_bot.say("You should play " + game)
+#Info
+@my_bot.command()
+async def info():
+    await my_bot.say("Welcome to BlitzKrieg's informational menu. For info on specific commands, type any of the following.")
+    await my_bot.say("```%info_rainbow\n%info_overwatch\n%info_nutshell\n%info_misc```")
+#Info: Rainbow Six
+@my_bot.command()
+async def info_rainbow():
+    await my_bot.say("Commands for Rainbow Six Siege.")
+    await my_bot.say("```%attack = Chooses a random operator on the attacking side for you to play.\n%defense - Chooses a random operator from the defending side for you to play.```")
+#Info: Overwatch
+@my_bot.command()
+async def info_overwatch():
+    await my_bot.say("Commands for Overwatch.")
+    await my_bot.say("```%hero - Chooses a random hero for you to play.\n%herodps - Chooses a random DPS hero for you to play.\n%herotank - Chooses a random tank for you to play.\n%heroheal - Chooses a random healer for you to play.\n%herodef - Chooses a random defnese hero for you to play.\n%(rank) - Tells you how many competitive points you will recieve as an end-of-season reward.```")
+#Info: In-A-Nutshell
+@my_bot.command()
+async def info_nutshell():
+    await my_bot.say("Available \"In a Nutshell\" commands.")
+    await my_bot.say("```%maya\t%josh\n%blake\t%brandon\n%jake\t%ray\n%xavier\t%leah\n%max\t%laura\n%cokejosh```")
+#Info: Misc
+@my_bot.command()
+async def info_misc():
+    await my_bot.say("Available misc. commands.")
+    await my_bot.say("```%eightball - Gives you a Magic Eight Ball response to a question.\n%game = Game Selector. Gives you a random game to play.```")
+my_bot.run("Mjk5NTQ4Mjc2ODEyOTM5MjY2.C_tLAA.B-wI1dUkRQ7ui6EOuWWejObQIjA")

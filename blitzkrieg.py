@@ -43,12 +43,12 @@ async def ping(*args):
 #Command: Random Operator (Rainbow Six Siege) - Attack
 @my_bot.command()
 async def attack():
-    attk = random.choice(open("data/attackers.txt").readlines())
+    attk = random.choice(open("data/attackers.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing as " + attk)
 #Command: Random Operator (Rainbow Six Siege) - Defense
 @my_bot.command()
 async def defense():
-    defen = random.choice(open("data/defenders.txt").readlines())
+    defen = random.choice(open("data/defenders.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing as " + defen)
 
 
@@ -91,25 +91,25 @@ async def comp():
 #Overwatch Random: DPS
 @my_bot.command()
 async def herodps():
-    dps = random.choice(open("data/dps.txt").readlines())
+    dps = random.choice(open("data/dps.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing " + dps)
 
 #Overwatch Random: Tank
 @my_bot.command()
 async def herotank():
-    tank = random.choice(open("data/tank.txt").readlines())
+    tank = random.choice(open("data/tank.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing " + tank)
 
 #Overwatch Random: Healer
 @my_bot.command()
 async def heroheal():
-    heal = random.choice(open("data/healer.txt").readlines())
+    heal = random.choice(open("data/healer.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing " + heal)
 
 #Overwatch Random: Defense
 @my_bot.command()
 async def herodef():
-    herodef = random.choice(open("data/def.txt").readlines())
+    herodef = random.choice(open("data/def.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing " + herodef)
 
 #Comp Points Rewards checker
@@ -141,7 +141,7 @@ async def top500():
 #Command: Random Hero (Overwatch)
 @my_bot.command()
 async def hero():
-    hero = random.choice(open("data/heroes.txt").readlines())
+    hero = random.choice(open("data/heroes.txt",encoding='UTF-8').readlines())
     await my_bot.say("You will be playing " + hero)
 
 
@@ -151,71 +151,71 @@ async def hero():
 #Blake
 @my_bot.command()
 async def blake():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Blake.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Blake.txt",encoding='UTF-8').readlines()))
 
 #Brandon
 @my_bot.command()
 async def brandon():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Brandon.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Brandon.txt",encoding='UTF-8').readlines()))
 
 #Josh
 @my_bot.command()
 async def josh():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Josh.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Josh.txt",encoding='UTF-8').readlines()))
 
 #Jake
 @my_bot.command()
 async def jake():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Jake.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Jake.txt",encoding='UTF-8').readlines()))
 
 #Maya
 @my_bot.command()
 async def maya():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Maya.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Maya.txt",encoding='UTF-8').readlines()))
 
 #Ray
 @my_bot.command()
 async def ray():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Ray.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Ray.txt",encoding='UTF-8').readlines()))
 
 #Xavier
 @my_bot.command()
 async def xavier():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Xavier.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Xavier.txt",encoding='UTF-8').readlines()))
 
 #Leah
 @my_bot.command()
 async def leah():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Leah.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Leah.txt",encoding='UTF-8').readlines()))
 
 #Max
 @my_bot.command()
 async def max():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Max.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Max.txt",encoding='UTF-8').readlines()))
 
 #Laura
 @my_bot.command()
 async def laura():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Laura.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Laura.txt",encoding='UTF-8').readlines()))
 
 #British Josh
 @my_bot.command()
 async def cokejosh():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/British_Josh.txt").readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/British_Josh.txt",encoding='UTF-8').readlines()))
 
 
 #MISC
 #Command: Magic 8-Ball
 @my_bot.command()
 async def eightball():
-    ball = random.choice(open("data/8ball.txt").readlines())
+    ball = random.choice(open("data/8ball.txt",encoding='UTF-8').readlines())
     await my_bot.say(ball)
 
 #Command: Game Selector
 #Sometimes I just can't decide what game to play. Hopefully, this will help with that.
 @my_bot.command()
 async def game():
-    game = random.choice(open('data/games.txt').readlines())
+    game = random.choice(open('data/games.txt',encoding='UTF-8').readlines())
     await my_bot.say("You should play " + game)
 
 #Info

@@ -147,7 +147,6 @@ async def hero():
 
 #IN A NUTSHELL QUOTES
 #Command Set: In a Nutshell quotes
-@my_bot.command()
 #Blake
 @my_bot.command()
 async def blake():
@@ -175,7 +174,7 @@ async def maya():
 
 #Gui
 @my_bot.command()
-async def ray():
+async def gui():
     await my_bot.say(random.choice(open("data/nutshell_quotes/Gui.txt",encoding='UTF-8').readlines()))
 
 #Xavier
@@ -206,7 +205,7 @@ async def britjosh():
 #Nelson
 @my_bot.command()
 async def nelson():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Laura.txt",encoding='UTF-8').readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Nelson.txt",encoding='UTF-8').readlines()))
 
 #MISC
 #Command: Magic 8-Ball
@@ -252,4 +251,4 @@ async def info_misc():
     await my_bot.say("Available misc. commands.")
     await my_bot.say("```%eightball - Gives you a Magic Eight Ball response to a question.\n%game = Game Selector. Gives you a random game to play.```")
 
-my_bot.run(token)
+my_bot.run("Mjk5NTQ4Mjc2ODEyOTM5MjY2.C_tLAA.B-wI1dUkRQ7ui6EOuWWejObQIjA")

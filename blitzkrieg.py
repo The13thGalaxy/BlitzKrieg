@@ -1,4 +1,4 @@
-##BlitzKrieg v.1.0
+##BlitzKrieg v.1.0.01
 #Copyright Maya Pharis 2017
 
 #GENERAL BOT STUFF
@@ -173,10 +173,10 @@ async def jake():
 async def maya():
     await my_bot.say(random.choice(open("data/nutshell_quotes/Maya.txt",encoding='UTF-8').readlines()))
 
-#Ray
+#Gui
 @my_bot.command()
 async def ray():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Ray.txt",encoding='UTF-8').readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Gui.txt",encoding='UTF-8').readlines()))
 
 #Xavier
 @my_bot.command()
@@ -200,9 +200,13 @@ async def laura():
 
 #British Josh
 @my_bot.command()
-async def cokejosh():
+async def britjosh():
     await my_bot.say(random.choice(open("data/nutshell_quotes/British_Josh.txt",encoding='UTF-8').readlines()))
 
+#Nelson
+@my_bot.command()
+async def nelson():
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Laura.txt",encoding='UTF-8').readlines()))
 
 #MISC
 #Command: Magic 8-Ball
@@ -240,7 +244,7 @@ async def info_overwatch():
 @my_bot.command()
 async def info_nutshell():
     await my_bot.say("Available \"In a Nutshell\" commands.")
-    await my_bot.say("```%maya\t%josh\n%blake\t%brandon\n%jake\t%ray\n%xavier\t%leah\n%max\t%laura\n%cokejosh```")
+    await my_bot.say("```%maya\t%josh\n%blake\t%brandon\n%jake\t%gui\n%xavier\t%leah\n%max\t%laura\n%britjosh\t%gui```")
 
 #Info: Misc
 @my_bot.command()

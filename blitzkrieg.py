@@ -1,4 +1,4 @@
-##BlitzKrieg v.1.0.01
+##BlitzKrieg v.1.1
 #Copyright Maya Pharis 2017
 
 #GENERAL BOT STUFF
@@ -228,7 +228,7 @@ async def game():
 #Yes, I did.
 @my_bot.command()
 async def dad():
-    joke = random.choice(open("data/dad_jokes/dadjokes.txt",encoding='UTF-8').readlines())
+    joke = random.choice(open("data/dadjokes.txt",encoding='UTF-8').readlines())
     await my_bot.say(joke)
 #Info
 @my_bot.command()

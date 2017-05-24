@@ -114,6 +114,8 @@ async def herodef():
 
 #Comp Points Rewards checker
 @my_bot.command()
+async def comppoints():
+    await my_bot.say("Please specify a rank. Use %bronze, %silver, %gold, %platinum, %master, %grandmaster or %top500.")
 async def bronze():
     await my_bot.say("You will recieve 100 competitive points at the end of the season. Try harder next season.")
 @my_bot.command()
@@ -147,6 +149,7 @@ async def hero():
 
 #IN A NUTSHELL QUOTES
 #Command Set: In a Nutshell quotes
+@my_bot.command()
 #Blake
 @my_bot.command()
 async def blake():
@@ -174,7 +177,7 @@ async def maya():
 
 #Gui
 @my_bot.command()
-async def gui():
+async def ray():
     await my_bot.say(random.choice(open("data/nutshell_quotes/Gui.txt",encoding='UTF-8').readlines()))
 
 #Xavier
@@ -205,7 +208,7 @@ async def britjosh():
 #Nelson
 @my_bot.command()
 async def nelson():
-    await my_bot.say(random.choice(open("data/nutshell_quotes/Nelson.txt",encoding='UTF-8').readlines()))
+    await my_bot.say(random.choice(open("data/nutshell_quotes/Laura.txt",encoding='UTF-8').readlines()))
 
 #MISC
 #Command: Magic 8-Ball
@@ -221,6 +224,12 @@ async def game():
     game = random.choice(open('data/games.txt',encoding='UTF-8').readlines())
     await my_bot.say("You should play " + game)
 
+#Command: Dad Joke
+#Yes, I did.
+@my_bot.command()
+async def dad():
+    joke = random.choice(open("data/dad_jokes/dadjokes.txt",encoding='UTF-8').readlines())
+    await my_bot.say(joke)
 #Info
 @my_bot.command()
 async def info():
@@ -251,4 +260,4 @@ async def info_misc():
     await my_bot.say("Available misc. commands.")
     await my_bot.say("```%eightball - Gives you a Magic Eight Ball response to a question.\n%game = Game Selector. Gives you a random game to play.```")
 
-my_bot.run("Mjk5NTQ4Mjc2ODEyOTM5MjY2.C_tLAA.B-wI1dUkRQ7ui6EOuWWejObQIjA")
+my_bot.run(token)
